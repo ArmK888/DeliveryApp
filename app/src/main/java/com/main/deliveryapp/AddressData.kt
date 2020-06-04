@@ -23,7 +23,7 @@ fun addressData(): List<DeliveryDetailsModel> {
             "08:40",
             "09:20",
             "09:10",
-            true
+            false
         ),
         DeliveryDetailsModel(
             "36-62 Avet Avetisyan",
@@ -31,8 +31,7 @@ fun addressData(): List<DeliveryDetailsModel> {
             44.500626,
             "09:20",
             "10:10",
-            "10:12",
-            false
+            "10:12"
         ),
         DeliveryDetailsModel(
             "27 Hrachya Kochar St",

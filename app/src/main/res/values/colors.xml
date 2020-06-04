@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+    <color name="colorInactiveRow">#e1e4e4</color>
+    <color name="colorActiveRow">#ffffff</color>
+    <color name="colorFinishRow">#52676c</color>
+    <color name="colorPrimaryText">#000000</color>
+    <color name="colorSecondaryText">#9e9e9e</color>
+    <color name="colorFinishedText">#d9dada</color>
+    <color name="colorActiveCircularText">#ffffff</color>
+    <color name="colorInactiveCircularText">#000000</color>
+    <color name="colorActiveCircular">#e90051</color>
+    <color name="colorInactiveCircular">#dedede</color>
+    <color name="colorFinishedCircular">#4687f1</color>
+    <color name="colorStopsFragmentBackground">#52676c</color>
+    <color name="colorDeliveryETAGreen">#52b661</color>
+    <color name="colorDeliveryETARed">#d50000</color>
+    <color name="colorButtonText">#4687f1</color>
+</resources>

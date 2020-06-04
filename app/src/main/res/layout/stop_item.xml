@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deliveryStopCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/deliveryStopMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/deliveryStopID"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/circle_active"
+            android:gravity="center"
+            android:textColor="@color/colorActiveCircularText"
+            app:layout_constraintBottom_toBottomOf="@+id/deliveryStopAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/deliveryStopTitle"
+            tools:text="21" />
+
+        <ImageView
+            android:id="@+id/deliveryFinishedImage"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/circle_finished"
+            android:gravity="center"
+            android:padding="6dp"
+            android:src="@drawable/ic_check_wihte"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/deliveryStopAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/deliveryStopTitle"
+            tools:text="21" />
+
+
+        <TextView
+            android:id="@+id/deliveryStopTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/deliveryAlertIcon"
+            app:layout_constraintStart_toEndOf="@+id/deliveryStopID"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="68dp"
+            tools:text="1454987984" />
+
+
+        <TextView
+            android:id="@+id/deliveryStopAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/deliveryNavigationLayout"
+            app:layout_constraintEnd_toStartOf="@+id/deliveryStopTimeRange"
+            app:layout_constraintStart_toStartOf="@+id/deliveryStopTitle"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryStopTitle"
+            app:layout_goneMarginBottom="20dp"
+            tools:text="Westplein 11 3016 BM Rotterdam " />
+
+
+        <TextView
+            android:id="@+id/deliveryStopTimeRange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/deliveryStopAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/deliveryStopAddress"
+            tools:text="09:00-10:00" />
+
+        <ImageView
+            android:id="@+id/deliveryAlertIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_alert"
+            app:layout_constraintBottom_toBottomOf="@+id/deliveryTime"
+            app:layout_constraintEnd_toStartOf="@+id/deliveryTime"
+            app:layout_constraintStart_toEndOf="@+id/deliveryStopTitle"
+            app:layout_constraintTop_toTopOf="@+id/deliveryTime" />
+
+        <TextView
+            android:id="@+id/deliveryTime"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="33dp"
+            android:gravity="end"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/deliveryStopTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/deliveryAlertIcon"
+            app:layout_constraintTop_toTopOf="@+id/deliveryStopTitle"
+            tools:text="10:10" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/deliveryNavigationLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/deliveryStopAddress"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryStopAddress">
+
+            <View
+                android:id="@+id/navigation_line"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="#E0E0E0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/delivery_navigation_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/ic_navigation"
+                android:text="@string/navigate"
+                android:textColor="@color/colorButtonText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/delivery_finish_button"
+                app:layout_constraintTop_toBottomOf="@+id/navigation_line" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/delivery_finish_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/ic_check"
+                android:text="@string/finish"
+                android:textColor="@color/colorButtonText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/delivery_navigation_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/delivery_navigation_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
